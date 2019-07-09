@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.UUID;
 
 
 @Controller
@@ -33,6 +34,11 @@ public class TaskController {
         taskRepository.save(task);
 
         return "redirect: /tasks";
+    }
+
+    @PutMapping("/tasks/{id}/state")
+    public String updateTask(@PathVariable UUID id) {
+        Task task = taskRepository.findById(id);
     }
 
 }

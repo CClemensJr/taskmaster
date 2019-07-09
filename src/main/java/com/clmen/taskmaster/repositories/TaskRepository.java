@@ -12,6 +12,6 @@ public interface TaskRepository extends CrudRepository<Task, Integer> {
     @EnableScan
     Iterable<Task> findAll();
 
-    Optional<Task> findById(UUID id);
+    Task findById(UUID id);
 }
 
