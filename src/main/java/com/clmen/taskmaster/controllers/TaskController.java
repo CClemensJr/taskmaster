@@ -24,4 +24,15 @@ public class TaskController {
         return gson.toJson(tasks);
     }
 
+    @PostMapping("/tasks")
+    public String createTask(@RequestParam String title, String description) {
+        Task task = new Task(title, description);
+
+        task.setStatus(Task.Status.Available);
+
+        taskRepository.save(task);
+
+        return "redirect: /tasks";
+    }
+
 }
