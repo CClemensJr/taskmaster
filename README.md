@@ -20,22 +20,29 @@ their status.
 ## CHANGELOG
    * LAB 26: Build with DynamoDB
         * COMPLETED:
-            * Set up DynamoDB in AWS
-            * Setup application repository.
-            * Created Task model
-            * Connected app to DynamoDB
+            - [x] Set up DynamoDB in AWS
+            - [x] Setup application repository.
+            - [x] Created Task model
+            - [x] Connected app to DynamoDB
         * TO BE COMPLETED:
-            * Implement Feature Task 1
-            * Implement Feature Task 2
-            * Implement Feature Task 3
-            * Implement Feature Task 4
+            - [ ] Implement Feature Task 1
+            - [ ] Implement Feature Task 2
+            - [ ] Implement Feature Task 3
+            - [ ] Implement Feature Task 4
    * Lab 27: Structuring Data with NoSQL
         * COMPLETED:
-            * Added changelog to README
+            - [x] Added changelog to README
         * TO BE COMPLETED
-            * Implement Feature Task 1
-            * Implement Feature Task 2
-            * Implement Feature Task 3
-            * Implement Feature Task 4
-            * Implement Feature Task 5
-            * Implement Feature Task 6
+            - [ ] Implement Feature Task 1
+            - [ ] Implement Feature Task 2
+            - [ ] Implement Feature Task 3
+            - [ ] Implement Feature Task 4
+            - [ ] Implement Feature Task 5
+            - [ ] Implement Feature Task 6
+   * Lab 31: Programmatic S3 Uploads
+           * COMPLETED:
+           * TO BE COMPLETED
+               - [ ] Implement Feature Task 1
+               - [ ] Implement Feature Task 2
+               - [ ] Implement Feature Task 3
+               - [ ] Implement Feature Task 4 
