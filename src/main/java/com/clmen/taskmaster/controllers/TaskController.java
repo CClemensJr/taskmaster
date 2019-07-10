@@ -45,21 +45,26 @@ public class TaskController {
 //        }
 
         switch (task.getStatus()) {
-            case Available: task.setStatus(Task.Status.Assigned);
-                            taskRepository.save(task);
-                            break;
+            case Available:
+                task.setStatus(Task.Status.Assigned);
+                taskRepository.save(task);
 
-            case Assigned: task.setStatus(Task.Status.Accepted);
-                           taskRepository.save(task);
-                            break;
+                return "redirect:/tasks";
 
-            case Accepted: task.setStatus(Task.Status.Finished);
-                           taskRepository.save(task);
-                            break;
+            case Assigned:
+                task.setStatus(Task.Status.Accepted);
+                taskRepository.save(task);
 
+                return "redirect:/tasks";
 
+            case Accepted:
+                task.setStatus(Task.Status.Finished);
+                taskRepository.save(task);
 
+                return "redirect:/tasks";
         }
+
+        return "redirect:/tasks";
     }
 
 }
