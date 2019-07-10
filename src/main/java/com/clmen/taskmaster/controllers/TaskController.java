@@ -39,6 +39,27 @@ public class TaskController {
     @PutMapping("/tasks/{id}/state")
     public String updateTask(@PathVariable UUID id) {
         Task task = taskRepository.findById(id);
+
+//        if (task != null && task.getStatus() != Task.Status.Finished) {
+//
+//        }
+
+        switch (task.getStatus()) {
+            case Available: task.setStatus(Task.Status.Assigned);
+                            taskRepository.save(task);
+                            break;
+
+            case Assigned: task.setStatus(Task.Status.Accepted);
+                           taskRepository.save(task);
+                            break;
+
+            case Accepted: task.setStatus(Task.Status.Finished);
+                           taskRepository.save(task);
+                            break;
+
+
+
+        }
     }
 
 }
