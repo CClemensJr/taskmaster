@@ -40,10 +40,6 @@ public class TaskController {
     public String updateTask(@PathVariable UUID id) {
         Task task = taskRepository.findById(id);
 
-//        if (task != null && task.getStatus() != Task.Status.Finished) {
-//
-//        }
-
         switch (task.getStatus()) {
             case Available:
                 task.setStatus(Task.Status.Assigned);
