@@ -8,8 +8,7 @@ import java.util.List;
 import java.util.UUID;
 
 @EnableScan
-public interface TaskRepository extends CrudRepository<Task, Integer> {
-    @EnableScan
+public interface TaskRepository extends CrudRepository<Task, String> {
     List<Task> findAll();
 
     Task findById(UUID id);

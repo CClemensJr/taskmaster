@@ -45,6 +45,7 @@ public class Task {
     @DynamoDBAttribute
     public Status getStatus() { return status; }
 
+    public void setId(UUID id) { this.id = id; }
     public void setTitle(String title) { this.title = title; }
     public void setDescription(String description) { this.description = description; }
     public void setStatus(Status status) { this.status = status; }
