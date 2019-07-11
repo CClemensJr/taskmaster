@@ -13,18 +13,15 @@ repositories {
 	mavenCentral()
 }
 
-ext {
-	set('springCloudVersion', "Greenwich.SR1")
-}
+//ext {
+//	set('springCloudVersion', "Greenwich.SR1")
+//}
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.springframework.cloud:spring-cloud-starter-aws'
+	implementation 'com.google.code.gson:gson:2.8.5'
 
 	compile 'com.github.derjust:spring-data-dynamodb:5.1.0'
-	compile 'com.amazonaws:aws-java-sdk-dynamodb:1.11.585'
 	
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testImplementation 'org.springframework.security:spring-security-test'
